@@ -98,6 +98,13 @@ function Home() {
         {/* HOME CONTENT */}
         <div data-aos="zoom-in" className="homepageInfo">
           <div className="home__content">
+            <div>
+              <img
+                className="MyPhoto"
+                src="https://i.ibb.co/h28KvfX/New-Project.png"
+                alt=""
+              />
+            </div>
             <div className="">
               <h1 className="home__text pz__10">WELCOME TO MY WORLD</h1>
               <h2 className="home__text  pz__10">
