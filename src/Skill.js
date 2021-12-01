@@ -62,11 +62,12 @@ const Skill = () => {
 
   return (
     <div className="skillSection">
+      <hr className="bg-white" />
       <h1 className="about__heading">My Skills</h1>
       <div className="skillflex">
         <div>
           <h3 className="skillHead"> Expert</h3>
-          <SkillBar skills={expert}  />
+          <SkillBar skills={expert} />
         </div>
         <div>
           <h3 className="skillHead"> Comfortable </h3>

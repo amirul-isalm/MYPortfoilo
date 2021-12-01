@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: flex-end;
 }
+.blogTitle{
+    margin-left: 20px;
+}
 .Blog__meta.absolute {
     top: 0%;
     padding: 0px 20px;

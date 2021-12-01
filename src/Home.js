@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
-import logo from "./img/logo.png";
+import Typical from "react-typical";
 
 function Home() {
   // fixed Header
@@ -13,14 +13,14 @@ function Home() {
   return (
     <div className="home" id="Home">
       <div className="home__bg">
-        <div className="header d__flex align__items__center pxy__30">
-          <div className="navigation pxy__30">
+        <div className="header d__flex align__items__center   pxy__30">
+          <div className="navigation pt__20 pxy__20">
             <ul className="navbar d__flex">
               <a href="#Home">
                 <li className="nav__items mx__15">Home</li>
               </a>
               <a href="#About">
-                <li className="nav__items mx__15">About</li>
+                <li className="nav__items mx__15">About Me</li>
               </a>
               <a href="#Services">
                 <li className="nav__items mx__15">Services</li>
@@ -95,15 +95,35 @@ function Home() {
           <div className="home__content">
             <div className="">
               <h1 className="home__text pz__10">WELCOME TO MY WORLD</h1>
-              <h2 className="home__text sweet pz__10">
+              <h2 className="home__text  pz__10">
                 Hi, I’m <br /> Amirul Islam Shanto
               </h2>
-              <h3 className="home__text mernStack  pz__10">
-                A Professional MERN Stack Developer.
-              </h3>
+              <div className="textanimation ">
+                <span className=" fs-1">
+                  <Typical
+                    loop={Infinity}
+                    wrapper="p"
+                    steps={[
+                      "I'm a Web Developer ",
+                      2000,
+                      "I'm a Front-end Developer ",
+                      2000,
+                      "I'm a MERN Stack Developer ",
+                      2000,
+                      "I'm a Javascript Developer ",
+                      2000,
+                      "I'm a React Developer ",
+                      2000,
+                    ]}
+                  />
+                </span>
+              </div>
             </div>
             <div className="about__button ">
-              <a target="_balnk" href="https://drive.google.com/file/d/19_w8fwjI-rMQIXusvkYTv30_Twvtg_Wd/view?usp=sharing">
+              <a
+                target="_balnk"
+                href="https://drive.google.com/file/d/19_w8fwjI-rMQIXusvkYTv30_Twvtg_Wd/view?usp=sharing"
+              >
                 <button className="about btn pointer">Download Cv</button>
               </a>
 

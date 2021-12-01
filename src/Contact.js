@@ -17,6 +17,7 @@ function Contact() {
        .then(
          (result) => {
            console.log(result.text);
+           alert("Your message sent successfully.")
          },
          (error) => {
            console.log(error.text);
@@ -32,6 +33,7 @@ function Contact() {
 
     return (
       <div className="contact component__space" id="Contact">
+        <hr className="bg-white container mb-5" />
         <div className="row">
           <div className="col__2">
             <div className="contact__box">

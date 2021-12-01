@@ -1,19 +1,16 @@
 import React from "react";
 import "./Blog.css";
-import Blog1 from './img/blog-01.jpg';
-import Blog2 from './img/blog-02.jpg';
-import Blog3 from './img/blog-03.jpg';
+
 
 function Blog() {
   return (
     <div className="blog component__space" id="Blog">
+      <hr className="bg-white container mb-5" />
       <div className="heading">
-        <h1 className="heading">Latest News</h1>
-        <p className="heading p__color">
-          There are many variations of passages of Lorem Ipsum available,
-        </p>
-        <p className="heading p__color">
-          but the majority have suffered alteration.
+        <h1 className="about__heading blogTitle">Blogs</h1>
+
+        <p className="heading blogTitle p__color">
+          For Grow Your Skill Read the Documentation{" "}
         </p>
       </div>
       <div className="container">
@@ -32,7 +29,7 @@ function Blog() {
               </div>
               <div className="Blog__meta absolute">
                 <h5 className="project__text">HTML5</h5>
-                <h4 className="project__text">
+                <h4 className="project__text BlogName">
                   Getting started with HTML Documentation
                 </h4>
                 <a
@@ -59,7 +56,7 @@ function Blog() {
               </div>
               <div className="Blog__meta absolute">
                 <h5 className="project__text">Javascript</h5>
-                <h4 className="project__text">
+                <h4 className="project__text BlogName">
                   Getting started with Javascript Documentation
                 </h4>
                 <a
@@ -86,7 +83,7 @@ function Blog() {
               </div>
               <div className="Blog__meta absolute">
                 <h5 className="project__text">CSS3</h5>
-                <h4 className="project__text">
+                <h4 className="project__text BlogName">
                   Getting started with CSS3 Documentation
                 </h4>
                 <a

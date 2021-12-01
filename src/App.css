@@ -10,7 +10,7 @@
 body{
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #232249;
   font-family: sans-serif;
 }
 a{
@@ -53,6 +53,11 @@ p{
 }
 .mx__15{
   margin: 0px 15px;
+}
+
+.pt__20{
+  padding-top: 20px;
+
 }
 .px__30{
   padding: 0px 30px;
@@ -101,9 +106,7 @@ p{
   flex-direction: column;
   margin-top: 20px;
 }
-.component__space{
-  padding: 100px 0px;
-}
+
 .pointer{
   cursor: pointer;
 }
@@ -122,6 +125,11 @@ strong{
 }
 input{
   color: rgba(198,201,216,.75);
+}
+
+span.copyright {
+   
+  margin: 20px auto;
 }
 button.btn {
   font-size: 18px;
@@ -153,6 +161,9 @@ button.about.btn.pointer:hover {
 .col__2 {
     max-width: 100%;
 }
+.BlogName{
+  display: none;
+}
 }
 @media only screen and (max-width: 768px){
 .col__3 {
@@ -170,6 +181,7 @@ span.copyright {
 }
 .footer.d__flex.align__items__center.justify__content__space__between.pz-10 {
   flex-wrap: wrap;
+  
 }
 }
 

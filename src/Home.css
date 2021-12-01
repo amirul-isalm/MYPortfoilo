@@ -1,6 +1,6 @@
 .home__bg{
     background-image: url(https://i.ibb.co/5K66Ggj/bg.jpg);
-    background-color: rgba(13, 15, 19, 0.85);
+    background-color: rgba(35,34,73,0.6);
     background-blend-mode: darken,luminosity;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,9 +15,17 @@ li.nav__items{
     font-size: 18px;
     padding-bottom: 15px;
 }
-.mernStack{
+.textanimation{
+  text-align: center;
+}
+.textanimation>span{
+    margin-left: 10px;
+    font-weight: 800;
+    color: goldenrod;
+    font-size: 30px;
     
 }
+
 .home__content{
     padding: 150px 0px;
    text-align: center;
@@ -36,10 +44,10 @@ h2.home__text{
     font-family: 'Roboto Condensed', sans-serif;
 }
 h3.home__text{
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 800;
     font-family: 'Roboto Condensed', sans-serif;
-    line-height: 40px;
+    line-height: 50px;
     margin-top: 10px;
 }
 h4.home__text{
@@ -58,7 +66,7 @@ h4.home__text{
     z-index: 1000;
     width: 100%;
     padding: 0px 30px;
-    background-color: #191919;
+    background-color: #232249;
 }
 .toggle__menu {
     display: flex;
@@ -99,7 +107,7 @@ li.sideNavbar{
  .header{
      justify-content: space-between;
  }
- .navigation.pxy__30 {
+ .navigation.pxy__20 {
         display: none;
     }
 h2.white.pz__10 {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import aboutImg from "./img/about.jpg";
+
 function About() {
   //  Up To Top Btn
     window.addEventListener("scroll", function(){
@@ -8,8 +8,9 @@ function About() {
        upToTop.classList.toggle("active", window.scrollY > 0)
     });
   return (
-    <div className="about component__space" id="About">
+    <div className="about component__space pt-5" id="About">
       <div className="container">
+        
         <div className="row">
           <div className="col__2">
             <img
@@ -65,6 +66,7 @@ function About() {
           </svg>
         </a>
       </div>
+      
     </div>
   );
 }
