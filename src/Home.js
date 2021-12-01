@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
 import Typical from "react-typical";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Home() {
   // fixed Header
@@ -8,13 +10,16 @@ function Home() {
     const header = document.querySelector(".header");
     header.classList.toggle("active", window.scrollY > 100);
   });
+   useEffect(() => {
+     AOS.init({ duration: 1500 });
+   }, []);
   // Toogle Menu
   const [show, setShow] = useState(false);
   return (
     <div className="home" id="Home">
       <div className="home__bg">
         <div className="header d__flex align__items__center   pxy__30">
-          <div className="navigation pt__20 pxy__20">
+          <div data-aos="fade-top" className="navigation pt__20 pxy__20">
             <ul className="navbar d__flex">
               <a href="#Home">
                 <li className="nav__items mx__15">Home</li>
@@ -91,7 +96,7 @@ function Home() {
           ) : null}
         </div>
         {/* HOME CONTENT */}
-        <div className="homepageInfo">
+        <div data-aos="zoom-in" className="homepageInfo">
           <div className="home__content">
             <div className="">
               <h1 className="home__text pz__10">WELCOME TO MY WORLD</h1>

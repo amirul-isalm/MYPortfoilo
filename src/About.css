@@ -11,6 +11,7 @@ h1.about__heading{
     text-align: start;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 60px;
+    color: rgb(177, 177, 207);
 }
 button.about.btn.pointer {
     text-transform: capitalize;

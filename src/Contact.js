@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { init } from "emailjs-com";
 import './Contact.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 init("user_3ogP9bl45MCHHkf1sZC9I");
 function Contact() {
@@ -27,7 +29,9 @@ function Contact() {
 }
 
 
-
+ useEffect(() => {
+   AOS.init({ duration: 1500 });
+ }, []);
 
 
 
@@ -35,7 +39,7 @@ function Contact() {
       <div className="contact component__space" id="Contact">
         <hr className="bg-white container mb-5" />
         <div className="row">
-          <div className="col__2">
+          <div data-aos="fade-right" className="col__2">
             <div className="contact__box">
               <div className="contact__meta">
                 <h1 className="hire__text">Hire Me.</h1>
@@ -84,7 +88,7 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="col__2">
+          <div data-aos="fade-left" className="col__2">
             <img
               src="https://i.ibb.co/p4hRgyX/my-bg.png"
               alt=""

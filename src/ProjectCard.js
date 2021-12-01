@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import DetailsModal from "./DetailsModal";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ProjectCard = ({ myProject }) => {
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+   useEffect(() => {
+     AOS.init({ duration: 1500 });
+   }, []);
     return (
-      <div className="col__3">
+      <div data-aos="zoom-in" className="col__3">
         <div className="project__box pointer relative">
           <div className="project__box__img pointer relative">
             <div className="project__img__box">

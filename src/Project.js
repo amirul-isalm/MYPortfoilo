@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import "./Project.css";
 import ProjectCard from "./ProjectCard";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Project() {
   
@@ -12,7 +13,7 @@ function Project() {
           .then((res) => res.json())
           .then((data) => setMyProjects(data));
       }, []);
-  
+ 
 
   return (
     <div className="project  component__space" id="Portfolio">

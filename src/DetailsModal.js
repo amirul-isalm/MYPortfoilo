@@ -1,13 +1,18 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faDesktop } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {  Col, Container, Modal, Row } from 'react-bootstrap';
 import "./Modal.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const DetailsModal = ({ show, setShow, myProject }) => {
     console.log(myProject)
-    const { name ,livesite,clientCode,photo1,photo2,photo3,discription,photo4,tecnology} = myProject;
+  const { name, livesite, clientCode, photo1, photo2, photo3, discription, photo4, tecnology } = myProject;
+   useEffect(() => {
+     AOS.init({ duration: 1500 });
+   }, []);
   return (
     <Modal
       show={show}
@@ -17,7 +22,7 @@ const DetailsModal = ({ show, setShow, myProject }) => {
       aria-labelledby="example-custom-modal-styling-title"
     >
       <Modal.Header
-        className="bg-dark text-info"
+        className="modalTop text-info"
         closeVariant="white"
         closeButton
       >
@@ -31,11 +36,11 @@ const DetailsModal = ({ show, setShow, myProject }) => {
           <p> Technology Use: {tecnology}</p>
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body >
+      <Modal.Body>
         <Container>
           <Row>
             <Col sm>
-              <Row className="imgRow">
+              <Row data-aos="zoom-in" className="imgRow">
                 {" "}
                 <img
                   className="img-fluid descriptionImage mb-2 rounded-3"
@@ -43,7 +48,7 @@ const DetailsModal = ({ show, setShow, myProject }) => {
                   alt=""
                 />{" "}
               </Row>
-              <Row className="imgRow">
+              <Row data-aos="zoom-in" className="imgRow">
                 {" "}
                 <img
                   className="img-fluid descriptionImage rounded-3"
@@ -53,14 +58,14 @@ const DetailsModal = ({ show, setShow, myProject }) => {
               </Row>
             </Col>
             <Col sm>
-              <Row className="imgRow">
+              <Row data-aos="zoom-in" className="imgRow">
                 <img
                   className="img-fluid descriptionImage mb-3 rounded-3"
                   src={photo2}
                   alt=""
                 />
               </Row>
-              <Row className="imgRow">
+              <Row data-aos="zoom-in" className="imgRow">
                 <img
                   className="img-fluid descriptionImage rounded-3"
                   src={photo3}
@@ -69,7 +74,7 @@ const DetailsModal = ({ show, setShow, myProject }) => {
               </Row>
             </Col>
           </Row>
-          <div className="text-center my-3">
+          <div data-aos="zoom-in" className="text-center my-3">
             <a target="_blank" href={livesite}>
               <button className="about btn pointer my-2">
                 Preview <FontAwesomeIcon icon={faDesktop} />
@@ -82,7 +87,7 @@ const DetailsModal = ({ show, setShow, myProject }) => {
             </a>
           </div>
         </Container>
-<h3>Description</h3>
+        <h3>Description</h3>
         <p>{discription}</p>
       </Modal.Body>
     </Modal>

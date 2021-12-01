@@ -1,25 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function About() {
   //  Up To Top Btn
-    window.addEventListener("scroll", function(){
-      const upToTop = document.querySelector("a.bottom__to__top");
-       upToTop.classList.toggle("active", window.scrollY > 0)
-    });
+    // window.addEventListener("scroll", function(){
+    //   const upToTop = document.querySelector("a.bottom__to__top");
+    //    upToTop.classList.toggle("active", window.scrollY > 0)
+    // });
+  useEffect(() => {
+    AOS.init({duration:1500});
+  },[])
   return (
     <div className="about component__space pt-5" id="About">
       <div className="container">
-        
         <div className="row">
-          <div className="col__2">
+          <div data-aos="fade-right" className="col__2">
             <img
               src="https://i.ibb.co/yd221Tw/my-bg2-1.png"
               alt=""
               className="about__img"
             />
           </div>
-          <div className="col__2">
+          <div data-aos="fade-left" className="col__2">
             <h1 className="about__heading">About Me</h1>
             <div className="about__meta">
               <p className="about__text p__color">
@@ -29,21 +33,19 @@ function About() {
                 frontend and two full-stack projects in last few month.
               </p>
               <p className="about__text p__color">
-                SKILLS  <br />
+                SKILLS <br />
                 Comfortable Skills: HTML, CSS, Bootstrap, tailwind CSS,
                 React-Bootstrap, Material Ui, ES6, javascript, React JS,
-                Firebase Authentication, Firebase, Github, Express JS <br /> Familiar
-                With Redux, React Native, SASS, Node JS, MongoDB  Hosting:
-                Netlify, Heroku, Firebase
-                <br /> Tools: Git, Chrome Dev-tool,
-                Vs-code, Github
+                Firebase Authentication, Firebase, Github, Express JS <br />{" "}
+                Familiar With Redux, React Native, SASS, Node JS, MongoDB 
+                Hosting: Netlify, Heroku, Firebase
+                <br /> Tools: Git, Chrome Dev-tool, Vs-code, Github
               </p>
               <p className="about__text p__color">
                 My goal is to satisfy clients, try to understand what they want
                 for their website, help them from beginning to the end of the
                 project, and give support for every problem.
               </p>
-              
             </div>
           </div>
         </div>
@@ -66,7 +68,6 @@ function About() {
           </svg>
         </a>
       </div>
-      
     </div>
   );
 }
