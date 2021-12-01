@@ -27,9 +27,7 @@ function Home() {
               <a href="#About">
                 <li className="nav__items mx__15">About Me</li>
               </a>
-              <a href="#Services">
-                <li className="nav__items mx__15">Services</li>
-              </a>
+              
               <a href="#Portfolio">
                 <li className="nav__items mx__15">Portfolio</li>
               </a>
@@ -71,11 +69,7 @@ function Home() {
                     About
                   </a>
                 </li>
-                <li onClick={(e) => setShow(false)} className="sideNavbar">
-                  <a onClick={(e) => setShow(false)} href="#Services">
-                    Services
-                  </a>
-                </li>
+                
                 <li onClick={(e) => setShow(false)} className="sideNavbar">
                   <a onClick={(e) => setShow(false)} href="#Portfolio">
                     Portfolio
